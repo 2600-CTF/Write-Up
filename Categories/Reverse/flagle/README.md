@@ -1,6 +1,5 @@
 # Writeup for the challenge **_`flagle`_** from DiceCTF 2022
 ----
-
 - ## Challenge Information:
 
 | - | - |
@@ -109,7 +108,6 @@ La sortie nous donne: `d0Nu7`
 
 ---
 ### 4ème case: `cwrap`
----
 
 La 4ème case est un peu différente des autres, la fonction n'est cette fois pas en WASM
 
@@ -166,7 +164,7 @@ solver.add(s[3] + 2 == 35)
 Output: `m@x!M`
 
 ---
-## 6ème case: `T$r3}`
+### 6ème case: `T$r3}`
 
 On termine avec la fonction `validate_6`
 ![challenge](https://raw.githubusercontent.com/2600-CTF/Write-Up/master/CTF/DiceCTF%202022/Reverse/flagle/img/v6.png)
