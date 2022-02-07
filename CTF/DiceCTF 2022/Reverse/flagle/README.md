@@ -165,7 +165,7 @@ solver.add(s[3] + 2 == 35)
 Output: `m@x!M`
 
 ---
-## 6ème case: `T$r3}`
+### 6ème case: `T$r3}`
 
 On termine avec la fonction `validate_6`
 ![challenge](https://raw.githubusercontent.com/2600-CTF/Write-Up/master/CTF/DiceCTF%202022/Reverse/flagle/img/v6.png)
