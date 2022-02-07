@@ -109,7 +109,6 @@ La sortie nous donne: `d0Nu7`
 
 ---
 ### 4ème case: `cwrap`
----
 
 La 4ème case est un peu différente des autres, la fonction n'est cette fois pas en WASM
 
