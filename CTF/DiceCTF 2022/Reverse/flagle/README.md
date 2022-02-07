@@ -17,19 +17,26 @@ How hard could it be? Just guess the flag.
 ---
 
 - ## Solution
-En arrivant sur la page du challenge on découvre une grille de taille 6 x 6 composée de formulaire prenant 5 caractères en input
+  En arrivant sur la page du challenge on découvre une grille de taille 6 x 6 composée de formulaire prenant 5 caractères en input
   ![challenge](https://raw.githubusercontent.com/2600-CTF/Write-Up/master/CTF/DiceCTF%202022/Reverse/flagle/img/challenge.png)
+  
   En regardant dans les sources de la page, on trouve plusieurs fichiers Javascript
-![challenge](https://raw.githubusercontent.com/2600-CTF/Write-Up/master/CTF/DiceCTF%202022/Reverse/flagle/img/tree.png)
-Il semblerait que ce challenge utilise du WASM (Web assembly)
+  
+  ![challenge](https://raw.githubusercontent.com/2600-CTF/Write-Up/master/CTF/DiceCTF%202022/Reverse/flagle/img/tree.png)
+  
+  Il semblerait que ce challenge utilise du WASM (Web assembly)
 En regardant le code Javascript écrit directement dans la page web on voit qu'un listerner est placé sur le bouton `GUESS`
+
 ![challenge](https://raw.githubusercontent.com/2600-CTF/Write-Up/master/CTF/DiceCTF%202022/Reverse/flagle/img/guess.png)
+
 Cette fonction récupère successivement les valeurs de chaque case d'une ligne et les vérifies grâce à la fonction `guess()`
+
 ---
 
 ### 1ère case: `dice{`
 La valeur de cette 1ère case est logique, elle correspond au format des flag pour ce CTF: `dice\{[!-z|~]+\}`
 Nous pouvons toutefois le vérifier en regardant la fonction `validate_1`
+
 ![challenge](https://raw.githubusercontent.com/2600-CTF/Write-Up/master/CTF/DiceCTF%202022/Reverse/flagle/img/validate1.png)
 
 La fonction fait un appel à `streq` qui compare 2 strings placé en mémoire, l'une des 2 correspond à notre 1ère case tandis que la seconde se situe à l'emplacement mémoire 1024
@@ -140,8 +147,11 @@ Néanmoins cette valeur ne pourra être vérifié que dans des conditions partic
 
 On repart sur une fonction en WASM
 Après un début de code similaire à la fonction `validate_2`, le programme va ajouter des valeurs à nos caractères
+
 ![challenge](https://raw.githubusercontent.com/2600-CTF/Write-Up/master/CTF/DiceCTF%202022/Reverse/flagle/img/v5-1.png)
+
 Une vérification est ensuite appliquée
+
 ![challenge](https://raw.githubusercontent.com/2600-CTF/Write-Up/master/CTF/DiceCTF%202022/Reverse/flagle/img/v5-2.png)
 
 Encore une fois, z3 nous permet de retrouver chaque valeur
@@ -171,7 +181,9 @@ solver.add((s[3] + 1546) * (s[2] + 3913) == 6431119)
 Output: `T$r3}`
 
 Le site nous informe que le flag est bel et bien trouvé
+
 ![challenge](https://raw.githubusercontent.com/2600-CTF/Write-Up/master/CTF/DiceCTF%202022/Reverse/flagle/img/result.png)
+
 ---
 ![challenge](https://raw.githubusercontent.com/2600-CTF/Write-Up/master/CTF/DiceCTF%202022/Reverse/flagle/img/result2.png)
 
