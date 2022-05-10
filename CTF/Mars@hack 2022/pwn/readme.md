@@ -202,4 +202,4 @@ Il suffit ensuite de changer d'utilisateur pour récupérer le profil **`Reine r
 
 ![challenge](https://raw.githubusercontent.com/2600-CTF/Write-Up/master/CTF/Mars%40hack%202022/pwn/img/flagged.png)
 
-Flag : **`fl@g{NeMeDebranchezPas!OuVousMourrerezTous}`**l
+Flag : **`fl@g{NeMeDebranchezPas!OuVousMourrerezTous}`**
