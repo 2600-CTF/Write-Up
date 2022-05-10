@@ -192,8 +192,10 @@ F((currentUser)) --> A[0x00000000]
 A --> C[0x00000000: name] --> E[''\x04\x00\x00\x00AAAAAAAAAAAA'']
 A --> D[0x00000010: id] --> B[1]
 ```
+---
 
 On se retrouve alors avec un utilisateur sans nom mais possédant le rôle `admin`
+
 ![challenge](https://raw.githubusercontent.com/2600-CTF/Write-Up/master/CTF/Mars%40hack%202022/pwn/img/exploit.png)
 
 Il suffit ensuite de changer d'utilisateur pour récupérer le profil **`Reine rouge`**
