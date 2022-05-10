@@ -4,7 +4,7 @@
 
 | - | - |
 | ----------- | ----------- |
-| Name: | **`flage`** |
+| Name: | **`flagle`** |
 | Category: | **`reverse`** |
 | Points: | **`120`**|
 | Author: | **`infuzion`**|
